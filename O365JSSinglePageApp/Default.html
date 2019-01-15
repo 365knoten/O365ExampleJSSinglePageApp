@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ADAl Login</title>
+    <meta charset="utf-8" />  
+</head>
+<body>
+    <p>
+        <a href="#" onclick="authContext.login(); return false;">Log in</a> |
+        <a href="#" onclick="authContext.logOut(); return false;">Log out</a>
+    </p>
+    <p id="username"></p>
+    <pre id="logmessage"></pre>
+
+
+    <div id="scripts">
+        <!-- Fetch Polyfill (for older Browsers)-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CPromise%2CPromise.prototype.finally%2Cfetch"></script>
+
+
+        <!--Load Adal Library-->
+        <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.11/js/adal.min.js"></script>
+        <!--Load ClientIds-->
+        <script src="Scripts/Secret.js"></script>
+        <!--Function to display durrent user data-->
+        <script src="Scripts/getCurrentUser.js"></script>
+        <!-- Login Mechanism-->
+        <script src="Scripts/App.js"></script>
+    </div>
+
+</body>
+</html>
